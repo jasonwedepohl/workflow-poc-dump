@@ -1,0 +1,36 @@
+<h1>Add user</h1>
+<form>
+  <label for="firstName">First name:</label>
+  <input
+    type="text"
+    class="form-control"
+    id="fieldA"
+    name="firstName"
+    [(ngModel)]="firstName"
+  /><br /><br />
+  <label for="lastName">Last name:</label>
+  <input
+    type="text"
+    class="form-control"
+    id="lastName"
+    name="lastName"
+    [(ngModel)]="lastName"
+  /><br /><br />
+  <label for="email">Email address:</label>
+  <input
+    type="email"
+    class="form-control"
+    id="email"
+    name="email"
+    [(ngModel)]="email"
+  /><br /><br />
+  <button type="submit" class="btn btn-primary" (click)="submitUserAndNavigateToNext()">Submit</button><br /><br />
+  <button
+    type="submit"
+    class="btn btn-primary"
+    (click)="submitUserAndAddAnother()"
+    *ngIf="offeringType === 'B'"
+  >
+    Submit and add another user
+  </button>
+</form>

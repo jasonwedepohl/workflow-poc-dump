@@ -1,0 +1,5 @@
+<h1 *ngIf="!initialised">Initialising offering...</h1>
+<h1 *ngIf="initialised">Offering initialised, welcome letter sent</h1>
+<button [disabled]="!initialised" (click)="startAnother()" class="btn btn-primary">
+  Start another onboarding
+</button>
